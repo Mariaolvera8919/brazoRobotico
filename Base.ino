@@ -1,7 +1,4 @@
- /*
-  Creado: Luis del Valle (ldelvalleh@programarfacil.com)
-  https://programarfacil.com
-*/
+
  
 // Incluímos la librería para poder controlar el servo
 #include <Servo.h>
