@@ -2,8 +2,8 @@
 #include <Servo.h>
 
 // Declaramos la variable para controlar el servo
-Servo base;
-int movimientoBase = 100;
+Servo brazo;
+int movimientoBrazo = 90;
 int input;
  
 void setup() {
@@ -11,25 +11,25 @@ void setup() {
   Serial.begin(9600);
  
   // Iniciamos el servo para que empiece a trabajar con el pin 9
-  base.attach(9);
+  brazo.attach(9);
 
-  // Inicializamos las base cerradas
-  base.write(90);
+  // Inicializamos el brazo en 90°
+  brazo.write(30);
 }
  
 void loop() {
   while (Serial.available() > 0) { // SI HAY UN MENSAJE DISPONIBLE
     input = Serial.read();
 
-    if(input == '1') { // MOVER BASE A LA IZQUIERDA
-      if(movimientoBase >= 0)
-        movimientoBase -= 10;
-    } else if(input == '0') { // MOVER BASE A LA DERECHA
-      if(movimientoBase <= 180)
-        movimientoBase += 10;
+    if(input == '0') { // LEVANTAR brazo
+      if(movimientoBrazo >= 30)
+        movimientoBrazo -= 10;
+    } else if(input == '1') { // BAJAR brazo
+      if(movimientoBrazo <= 90)
+        movimientoBrazo += 10;
     }
 
-    base.write(movimientoBase);
+    brazo.write(movimientoBrazo);
     Serial.println(Serial.read());
     //delay(700);
   }
