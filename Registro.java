@@ -1,4 +1,4 @@
-package BrazoRobótico;
+package BrazoRobÃ³tico;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -20,6 +20,7 @@ public class Registro extends JPanel {
 	private JLabel lblTitulo;
 	public static JTextArea registroMovimientos;
 
+	//panel norte y centro de la clase regristro
 	public Registro() {
 		setLayout(new BorderLayout());
 		
@@ -27,6 +28,7 @@ public class Registro extends JPanel {
 		add(getCentro(), BorderLayout.CENTER);
 	}
 	
+	//panel y dimensiones del label del titulo
 	private JPanel getNorte() {
 		JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		panelNorte = new JPanel(new BorderLayout());
@@ -39,6 +41,8 @@ public class Registro extends JPanel {
 		return panelNorte;
 	}
 	
+	
+	//panel para el registro d emovimientos del brazo robotico
 	private JPanel getCentro() {
 		JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		panelCentro = new JPanel(new BorderLayout());
