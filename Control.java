@@ -1,4 +1,4 @@
-package BrazoRobótico;
+package BrazoRobÃ³tico;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -22,6 +22,7 @@ public class Control extends JPanel {
 	/**
 	 * 
 	 */
+	// implementa el interfaz Serializable, para leer cualquier otro dispositivo de entrada/salida
 	private static final long serialVersionUID = 1L;
 	private Font font = new Font("Franklin Gothic Demi Cond", Font.PLAIN, 20);
 	private JLabel labelTitulo;
@@ -36,12 +37,15 @@ public class Control extends JPanel {
 	private JButton btnBaseIzq, btnBaseDer;
 	private Timer timer;
 	private String botonPresionado = "";
+	
+	//se instancia la librerioa PanamaHitek para Arduino
 	private PanamaHitek_Arduino pinzas = new PanamaHitek_Arduino();
 	private PanamaHitek_Arduino codo = new PanamaHitek_Arduino();
 	private PanamaHitek_Arduino brazo = new PanamaHitek_Arduino();
 	private PanamaHitek_Arduino base = new PanamaHitek_Arduino();
 	private Manejadora evento = new Manejadora();
-
+	
+	
 	public Control() {
 		setLayout(new BorderLayout());
 		
@@ -77,6 +81,8 @@ public class Control extends JPanel {
 		return panel;
 	}
 	
+	
+	// Panel de la interfaz de las pinzas del robot
 	private JPanel getPinzas() {
 		JPanel panel = new JPanel(new GridLayout(2, 1, 5, 5));
 		panelPinza = new JPanel(new BorderLayout());
@@ -94,6 +100,7 @@ public class Control extends JPanel {
 		return panelPinza;
 	}
 	
+	//Panel de la interfaz del codo  del robot
 	private JPanel getCodo() {
 		JPanel panel = new JPanel(new GridLayout(1, 2, 5, 5));
 		panelCodo = new JPanel(new BorderLayout());
@@ -111,6 +118,7 @@ public class Control extends JPanel {
 		return panelCodo;
 	}
 	
+	//Panel de la interfaz del brazo del robot 
 	private JPanel getBrazo() {
 		JPanel panel = new JPanel(new GridLayout(1, 2, 5, 5));
 		panelBrazo = new JPanel(new BorderLayout());
@@ -128,6 +136,7 @@ public class Control extends JPanel {
 		return panelBrazo;
 	}
 	
+	//Panel de la interfaz de la base del robot
 	private JPanel getBase() {
 		JPanel panel = new JPanel(new GridLayout(1, 2, 5, 5));
 		panelBase = new JPanel(new BorderLayout());
@@ -145,6 +154,7 @@ public class Control extends JPanel {
 		return panelBase;
 	}
 	
+	//el siguiente metodo manipulara el robot dependiendo del boton de la interfaz que se haya oprimido
 	private void controlarBotones() {
 		timer = new Timer(100, new ActionListener() {
 
@@ -195,11 +205,11 @@ public class Control extends JPanel {
 		});
 	}
 	
-	/*MÉTODO QUE REALIZA LA CONEXIÓN CON ARDUINO*/
+	/*MÃ‰TODO QUE REALIZA LA CONEXIÃ“N CON ARDUINO*/
 	@SuppressWarnings("deprecation")
 	private void realizarConexionArduinoPinzas() {
 		try {
-			pinzas.ArduinoRXTX("COM4", 2000, 9600, evento); 	// REALIZAR CONEXIÓN CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
+			pinzas.ArduinoRXTX("COM4", 2000, 9600, evento); 	// REALIZAR CONEXIÃ“N CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
 		} catch (Exception e) {
 			System.out.println(e.getMessage()); 				// MOSTRAR MENSAJE DE ERROR
 		}
@@ -208,7 +218,7 @@ public class Control extends JPanel {
 	@SuppressWarnings("deprecation")
 	private void realizarConexionArduinoCodo() {
 		try {
-			codo.ArduinoRXTX("COM9", 2000, 9600, evento); 	// REALIZAR CONEXIÓN CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
+			codo.ArduinoRXTX("COM9", 2000, 9600, evento); 	// REALIZAR CONEXIÃ“N CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
 		} catch (Exception e) {
 			System.out.println(e.getMessage()); 				// MOSTRAR MENSAJE DE ERROR
 		}
@@ -217,7 +227,7 @@ public class Control extends JPanel {
 	@SuppressWarnings("deprecation")
 	private void realizarConexionArduinoBrazo() {
 		try {
-			brazo.ArduinoRXTX("COM3", 2000, 9600, evento); 	// REALIZAR CONEXIÓN CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
+			brazo.ArduinoRXTX("COM3", 2000, 9600, evento); 	// REALIZAR CONEXIÃ“N CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
 		} catch (Exception e) {
 			System.out.println(e.getMessage()); 				// MOSTRAR MENSAJE DE ERROR
 		}
@@ -226,12 +236,14 @@ public class Control extends JPanel {
 	@SuppressWarnings("deprecation")
 	private void realizarConexionArduinoBase() {
 		try {
-			base.ArduinoRXTX("COM3", 2000, 9600, evento); 	// REALIZAR CONEXIÓN CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
+			base.ArduinoRXTX("COM3", 2000, 9600, evento); 	// REALIZAR CONEXIÃ“N CON ARDUINO Y REGISTRAR EVENTO 'TEMP'
 		} catch (Exception e) {
 			System.out.println(e.getMessage()); 				// MOSTRAR MENSAJE DE ERROR
 		}
 	}
 	
+	
+	//Eventos para manipular el robot
 	private class Manejadora extends MouseAdapter implements SerialPortEventListener {
 
 		@Override
