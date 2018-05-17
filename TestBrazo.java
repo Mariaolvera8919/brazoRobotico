@@ -1,4 +1,4 @@
-package BrazoRobótico;
+package BrazoRobÃ³tico;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
@@ -11,14 +11,14 @@ public class TestBrazo {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (Exception e) {}
 		
-		JFrame frame = new JFrame("Control Brazo Robótico");
+		JFrame frame = new JFrame("Control Brazo RobÃ³tico");
 		
-		frame.setLayout(new BorderLayout()); 							// ESTABLECER LAYOUT 
-		frame.setSize(900, 600); 										// ESTABLECER TAMAÑO DE LA VENTANA
-		frame.setLocationRelativeTo(null); 								// ESTABLECER VENTANA AL CENTRO DE LA PANTALLA
+		frame.setLayout(new BorderLayout()); 					// ESTABLECER LAYOUT 
+		frame.setSize(900, 600); 						// ESTABLECER TAMAÃ‘O DE LA VENTANA
+		frame.setLocationRelativeTo(null); 					// ESTABLECER VENTANA AL CENTRO DE LA PANTALLA
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 			// TERMINAR PROGRAMA AL CERRAR VENTANA
-		frame.add(new Contenedora()); 									// AGREGAR PANEL AL JFRAME
-		frame.setVisible(true); 										// HACER VENTANA VISIBLE
+		frame.add(new Contenedora()); 						// AGREGAR PANEL AL JFRAME
+		frame.setVisible(true); 						// HACER VENTANA VISIBLE
 	}
 
 }
