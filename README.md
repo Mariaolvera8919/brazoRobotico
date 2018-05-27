@@ -3,7 +3,7 @@ PROYECTO BRAZO ROBÓTICO CONTROLADO POR PROGRAMA EN JAVA
 INTEGRANTES:
 -Hugo Rodrigo Murillo Martínez
 -María de Jesús Olvera Rivera
--Cinthya Cassandra Rangel
+-Cinthya Cassandra Escobedo Rangel
 
 INTRODUCCIÓN
 
