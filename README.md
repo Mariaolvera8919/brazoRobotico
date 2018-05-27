@@ -49,5 +49,44 @@ Programa en Java.
 Programa en Arduino.
 ![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/4.png)
 
-En el siguiente link se puede descargar el video donde se muestra el brazo en funcionamiento.
+Circuitos para presentación final en clase:
+![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/WhatsApp%20Image%202018-05-18%20at%205.01.43%20PM.jpeg)
+
+Presionando botón que lanza interrupción y muestra de que el LED se enciende cuando sucede:
+
+Antes de la interrupción:
+![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/WhatsApp%20Image%202018-05-18%20at%205.01.45%20PM.jpeg)
+Después de la interrupción:
+![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/WhatsApp%20Image%202018-05-18%20at%205.01.44%20PM.jpeg)
+
+Primeras pruebas del brazo funcionando:
 ![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/WhatsApp%20Video%202018-05-16%20at%209.03.34%20PM.mp4)
+
+Presentación en clase del funcionamiento completo del proyecto, mostrando el programa y el brazo funcionando:
+![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/WhatsApp%20Video%202018-05-18%20at%205.01.43%20PM.mp4)
+
+Presentación en clase del funcionamiento de la interrupción en el programa y su reacción:
+![alt text](https://github.com/Mariaolvera8919/brazoRobotico/blob/master/WhatsApp%20Video%202018-05-18%20at%205.01.44%20PM.mp4)
+
+
+Los archivos de los programas de Arduino son los siguientes:
+
+-Pinzas: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Pinzas.ino
+
+-Codo: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Codo.ino
+
+-Brazo: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Brazo.ino
+
+-Base: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Base.ino
+
+Los archivos de los programas en Java son los siguientes:
+
+-TestBrazo: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/TestBrazo.java
+
+-Contenedora: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Contenedora.java
+
+-Control: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Control.java
+
+-Registro: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/Registro.java
+
+-EjecutarPasos: https://github.com/Mariaolvera8919/brazoRobotico/blob/master/EjecutarPasos.java
