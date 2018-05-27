@@ -1,5 +1,10 @@
 PROYECTO BRAZO ROBÓTICO CONTROLADO POR PROGRAMA EN JAVA
 
+INTEGRANTES:
+-Hugo Rodrigo Murillo Martínez
+-María de Jesús Olvera Rivera
+-Cinthya Cassandra Rangel
+
 INTRODUCCIÓN
 
 Arduino es una plataforma de prototipos electrónicos, esta placa fue diseñada para facilitar el uso de la electrónica en proyectos multidisciplinarios, se pueden trabajar con otros componentes electrónicos como los servo motores, en el siguiente proyecto se implementará un brazo robótico el cual se podrá manipular a través de Arduino y una interfaz Java.
